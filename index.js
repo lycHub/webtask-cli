@@ -17,10 +17,9 @@ const chalk = require('chalk');
 const logSymbols = require('log-symbols');
 const fs = require('fs');
 const templates = require('./templates');
-// console.log(process.argv); 获取命令行参数
-
+const { version } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 program
-  .version('0.0.1');
+  .version(version);
 
 program
   .command('create <projectName> <templateName>')
