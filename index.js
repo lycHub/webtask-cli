@@ -17,9 +17,8 @@ const chalk = require('chalk');
 const logSymbols = require('log-symbols');
 const fs = require('fs');
 const templates = require('./templates');
-const { version } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 program
-  .version(version);
+  .version('1.0.3');
 
 program
   .command('create <projectName> <templateName>')
