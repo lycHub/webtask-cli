@@ -23,7 +23,7 @@ program
   .version('0.0.1');
 
 program
-  .command('create <projectName> [templateName]')
+  .command('create <projectName> <templateName>')
   .description('初始化项目模板')
   .action(function (projectName, templateName) {
     if (Object.keys(templates).find(item => item === templateName)) {
